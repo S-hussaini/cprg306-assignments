@@ -4,10 +4,11 @@ import Link from "next/link";
 const StudentInfo = () => {
   return (
     <dive>
-      <h1> Sheeba Hussaini </h1>
+      <h1> Name: Sheeba Hussaini </h1>
       <p>
-        <Link href="https://github.com/S-hussaini" target="_blank"> 
-          My GitHub Repository
+        GitHub:{" "}
+        <Link href="https://github.com/S-hussaini/cprg306-assignments.git" target="_blank"> 
+        S-hussaini/cprg306-assignments
         </Link>
       </p>
     </dive>
