@@ -3,15 +3,20 @@ import Link from "next/link";
 
 const StudentInfo = () => {
   return (
-    <dive>
-      <h1> Name: Sheeba Hussaini </h1>
+    <div>
+      <h1>Name: Sheeba Hussaini</h1>
       <p>
         GitHub:{" "}
-        <Link href="https://github.com/S-hussaini/cprg306-assignments.git" target="_blank"> 
-        S-hussaini/cprg306-assignments
+        <Link
+          href="https://github.com/S-hussaini/cprg306-assignments"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          S-hussaini/cprg306-assignments
         </Link>
       </p>
-    </dive>
+    </div>
   );
 };
+
 export default StudentInfo;

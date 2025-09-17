@@ -7,7 +7,7 @@ const HomePage = () => {
       <h1>CPRG 306: Web Development 2 - Assignments</h1>
       <p>
         <Link href="http://localhost:3000/week-2">
-        Go To Week 2 
+        Go To Week 2 →
         </Link>
       </p>
     </div>
