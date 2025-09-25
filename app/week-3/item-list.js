@@ -95,7 +95,7 @@ const items = [
           key = {index}
           name = {item.name}
           quantity = {item.quantity}
-          catagory = {item.category}
+          category = {item.category}
           />
         ))}
       </ul>
