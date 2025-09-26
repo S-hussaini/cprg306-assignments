@@ -11,17 +11,20 @@ const HomePage = () => {
       <div className="flex flex-col md:flex-row gap-4">
         <Link
           href="http://localhost:3000/week-2"
-          className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition transform hover:scale-105"
-        >
+          className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition transform hover:scale-105">
           Go To Week 2 →
         </Link>
-
         <Link
           href="http://localhost:3000/week-3"
-          className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition transform hover:scale-105"
-        >
+          className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition transform hover:scale-105">
           Go To Week 3 →
         </Link>
+        <Link
+          href="http://localhost:3000/week-4"
+          className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition transform hover:scale-105">
+          Go To Week 4 →
+        </Link>
+
       </div>
     </div>
   );
