@@ -24,6 +24,11 @@ const HomePage = () => {
           className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition transform hover:scale-105">
           Go To Week 4 →
         </Link>
+        <Link
+          href="http://localhost:3000/week-5"
+          className="bg-amber-300 hover:bg-amber-400 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition transform hover:scale-105">
+          Go To Week 5 →
+        </Link>
 
       </div>
     </div>
