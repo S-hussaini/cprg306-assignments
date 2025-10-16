@@ -22,7 +22,11 @@ export default function ItemList() {
 
   return (
     <main>
-      <div className ="flex gap-4 mb-6">
+      <div className ="flex flex-wrap gap-4 mb-10 items-center ">
+        
+        <p className ="text-black">
+          Sort By:
+        </p>
         <button
           onClick = {() => setSortBy ("name")}
           className = {`px-4 py-2 rounded ${sortBy === "name" ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-800"}`}>
