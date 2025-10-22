@@ -34,9 +34,13 @@ const HomePage = () => {
           href="http://localhost:3000/week-6"
           className="bg-red-950 hover:bg-red-800 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition transform hover:scale-105">
           Go To Week 6 →
+        </Link>
+
+        <Link
+          href="http://localhost:3000/week-7"
+          className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition transform hover:scale-105">
+          Go To Week 7 →
         </Link> 
-
-
       </div>
     </div>
   );
