@@ -9,35 +9,34 @@ const HomePage = () => {
       </h1>
 
       <div className="flex flex-col md:flex-row gap-4">
-        <Link
-          href="http://localhost:3000/week-2"
+        <Link href="./week-2"
           className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition transform hover:scale-105">
           Go To Week 2 →
         </Link>
         <Link
-          href="http://localhost:3000/week-3"
+          href="./week-3"
           className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition transform hover:scale-105">
           Go To Week 3 →
         </Link>
         <Link
-          href="http://localhost:3000/week-4"
+          href="./week-4"
           className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition transform hover:scale-105">
           Go To Week 4 →
         </Link>
         <Link
-          href="http://localhost:3000/week-5"
+          href="./week-5"
           className="bg-amber-300 hover:bg-amber-400 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition transform hover:scale-105">
           Go To Week 5 →
         </Link>
 
         <Link
-          href="http://localhost:3000/week-6"
+          href="./week-6"
           className="bg-red-950 hover:bg-red-800 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition transform hover:scale-105">
           Go To Week 6 →
         </Link>
 
         <Link
-          href="http://localhost:3000/week-7"
+          href="./week-7"
           className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition transform hover:scale-105">
           Go To Week 7 →
         </Link> 
