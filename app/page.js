@@ -40,6 +40,13 @@ const HomePage = () => {
           className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition transform hover:scale-105">
           Go To Week 7 →
         </Link> 
+
+        <Link
+          href="./week-8"
+          className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition transform hover:scale-105">
+          Go To Week 8 →
+        </Link>
+        
       </div>
     </div>
   );
