@@ -36,13 +36,13 @@ export default function NewItem({ onAddItem }) {
     <div>
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-lg bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col gap-4">
-        <h2 className="text-white text-2xl font-bold text-center mb-2">
+        className="bg-gray-50 border border-gray-300 rounded-lg p-4 mb-4 shadow-sm list-none w-[400px] cursor-pointer hover:bg-gray-100">
+        <h2 className="text-black text-2xl font-bold text-center mb-2">
           Add New Item
         </h2>
 
         <div>
-          <label className="block text-white font-semibold mb-1 text-sm">
+          <label className="block text-gray-800 font-semibold mb-1 text-sm">
             Item Name
           </label>
 
@@ -52,12 +52,12 @@ export default function NewItem({ onAddItem }) {
             onChange={(e) => setName(e.target.value)}
             required
             placeholder="Enter item name"
-            className="w-full px-3 py-1.5 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-100 text-sm"
+            className="w-full px-3 py-1.5 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 text-sm"
           />
         </div>
 
         <div>
-          <label className="block text-white font-semibold mb-1 text-sm">
+          <label className="block text-black font-semibold mb-1 text-sm">
             Quantity
           </label>
           <div className="flex items-center justify-between gap-3">
@@ -69,7 +69,7 @@ export default function NewItem({ onAddItem }) {
               -
             </button>
 
-            <span className="text-xl font-semibold text-white">{quantity}</span>
+            <span className="text-xl font-semibold text-gray-800">{quantity}</span>
             <button
               type="button"
               onClick={increment}
@@ -79,20 +79,20 @@ export default function NewItem({ onAddItem }) {
             </button>
         </div>
 
-        <p className="text-gray-300 text-xs mt-1">
+        <p className="text-gray-800 text-xs mt-1">
           Range: 1–20
         </p>
         </div>
 
           <div>
-            <label className="block text-white font-semibold mb-1 text-sm">
+            <label className="block text-black font-semibold mb-1 text-sm">
               Category
             </label>
 
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="w-full px-3 py-1.5 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-400 text-sm">
+              className="w-full px-3 py-1.5 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 text-sm">
               <option value="produce">Produce</option>
               <option value="dairy">Dairy</option>
               <option value="bakery">Bakery</option>
