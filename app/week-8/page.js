@@ -19,7 +19,7 @@ export default function Page() {
     if (!item || !item.name) return;
 
     const cleanedName = item.name
-      .replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|\uFE0F|\u200D)/g, "")
+      .replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '')
       .split(",")[0] 
       .trim();
     setSelectedItemName(cleanedName);
