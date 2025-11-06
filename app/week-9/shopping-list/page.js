@@ -1,15 +1,32 @@
 "use client";
 import { useState } from "react";
 import  {useEffect} from "react";
+import { useRouter } from "next/navigation";
+import { useUserAuth } from "../_utils/auth-context"; 
 import ItemList from "./item-list";
 import NewItem from "./new-item";
 import itemsData from "./items.json";
 import MealIdeas from "./meal-ideas";
 
 export default function Page() {
+  const { user } = useUserAuth();
+  const router = useRouter();
   const [items, setItems] = useState(itemsData);
-
   const [selectedItemName, setSelectedItemName] = useState("");
+
+  useEffect(() => {
+    if (!user) {
+      router.push("/"); 
+    }
+  }, [user, router]);
+
+  if (!user) {
+    return (
+      <main className="p-6 text-center">
+        <p className="text-gray-700 text-lg">Redirecting to the landing page...</p>
+      </main>
+    );
+  }
 
   const handleAddItem = (newItem) => {
     setItems((prevItems) => [...prevItems, newItem]);
@@ -29,7 +46,7 @@ export default function Page() {
   return (
     <main className="p-6 bg-gray-100 min-h-screen flex flex-col items-center">
       <h1 className="text-4xl font-bold mb-10 text-gray-900 tracking-tight drop-shadow-sm">
-        Week 8 — Shopping List and Meal Ideas
+        Week 9 — Shopping List and Meal Ideas
       </h1>
 
       <div className="flex flex-col md:flex-row gap-10 items-start w-full justify-center">
