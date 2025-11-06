@@ -1,13 +1,25 @@
 "use client";
 import { useState } from "react"; 
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useUserAuth } from "../_utils/auth-context";
 import ItemList from "./item-list";
 import NewItem from "./new-item";
 import itemsData from "./items.json";
 import MealIdeas from "./meal-ideas";
 
 export default function Page() {
+  const router = useRouter();
+  const{ user, loading } = useUserAuth();
+
   const [items, setItems] = useState(itemsData);
   const [selectedItemName, setSelectedItemName] = useState("");
+
+  useEffect(() => {
+    if (!loading && !user) {
+      router.push("/week-9/login");
+    }
+  }, [user, loading, router]);
   
   const handleAddItem = (newItem) => {
     setItems((prevItems) => [...prevItems, newItem]);
@@ -23,6 +35,7 @@ export default function Page() {
     setSelectedItemName(cleanedName);
     console.log("Selected ingredient:", cleanedName);
   };
+
 
   return (
     <main className="p-6 bg-gray-100 min-h-screen flex flex-col items-center">
