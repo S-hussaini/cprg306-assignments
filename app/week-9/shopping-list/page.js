@@ -1,33 +1,14 @@
 "use client";
-import { useState } from "react";
-import  {useEffect} from "react";
-import { useRouter } from "next/navigation";
-import { useUserAuth } from "../_utils/auth-context"; 
+import { useState } from "react"; 
 import ItemList from "./item-list";
 import NewItem from "./new-item";
 import itemsData from "./items.json";
 import MealIdeas from "./meal-ideas";
 
 export default function Page() {
-  const { user } = useUserAuth();
-  const router = useRouter();
   const [items, setItems] = useState(itemsData);
   const [selectedItemName, setSelectedItemName] = useState("");
-
-  useEffect(() => {
-    if (!user) {
-      router.push("/"); 
-    }
-  }, [user, router]);
-
-  if (!user) {
-    return (
-      <main className="p-6 text-center">
-        <p className="text-gray-700 text-lg">Redirecting to the landing page...</p>
-      </main>
-    );
-  }
-
+  
   const handleAddItem = (newItem) => {
     setItems((prevItems) => [...prevItems, newItem]);
   };
