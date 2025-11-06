@@ -1,8 +1,6 @@
 "use client";
 import { useState } from "react";
 import  {useEffect} from "react";
-import { useRouter } from "next/navigation";
-import { useUserAuth } from "../_utils/auth-context";
 import ItemList from "./item-list";
 import NewItem from "./new-item";
 import itemsData from "./items.json";
@@ -13,17 +11,6 @@ export default function Page() {
 
   const [selectedItemName, setSelectedItemName] = useState("");
 
-  const { user} = useUserAuth();
-  const router = useRouter();
-  useEffect(() => {
-    if (user ===null){
-      router.push('/week-9');
-    }
-  }, [user, router]);
-
-  if (user === null){
-    return null;
-  }
   const handleAddItem = (newItem) => {
     setItems((prevItems) => [...prevItems, newItem]);
   };
